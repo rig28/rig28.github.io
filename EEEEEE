@@ -1,1 +1,16 @@
-
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Booga</title>
+  </head>
+  <body>
+    <h1>Booga</h1>
+  </body>
+  <style>
+    h1 {
+      font-size: 200px;
+      font-family: "Arial";
+      text-align: center;
+    }
+  </style>
+</html>
