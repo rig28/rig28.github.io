@@ -1,8 +1,11 @@
 body {
   background-image: url("../Wiki/img/forsaken bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 h1 {
   font-size: 60px;
   font-family: "Arial";
   text-align: center;
+  color: white;
 }
