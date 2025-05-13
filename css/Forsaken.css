@@ -1,10 +1,10 @@
 body {
   margin: 0;
-}
-header {
   background-image: url("../Wiki/img/forsaken bg.png");
   background-repeat: no-repeat;
   background-size: cover;
+}
+header {
   height: 50vh;
   width: 100%;
   position: absolute;
