@@ -10,9 +10,6 @@ header {
   position: absolute;
   top: 0;
 }
-h1 {
-  font-size: 60px;
-  font-family: "Arial";
-  text-align: center;
-  color: white;
+img {
+  justify-self: center;
 }
