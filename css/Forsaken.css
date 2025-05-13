@@ -1,8 +1,8 @@
-body {
+header {
   background-image: url("../Wiki/img/forsaken bg.png");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 50vh;
+  height: 40vh;
 }
 h1 {
   font-size: 60px;
