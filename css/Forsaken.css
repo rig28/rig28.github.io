@@ -6,6 +6,9 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   height: 50vh;
+  width: 100%;
+  position: absolute;
+  top: 0;
 }
 h1 {
   font-size: 60px;
