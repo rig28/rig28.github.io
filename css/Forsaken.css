@@ -15,4 +15,7 @@ header {
 img {
   width: 306px;
   height: 144px;
+  padding: inherit;
+  margin: auto;
+  display: block;
 }
