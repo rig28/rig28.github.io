@@ -23,4 +23,340 @@ th, td {
   padding: 15px;
   text-align: left;
 }
-<script src="https://gist.github.com/Tau5/98b371e48b92dc6317f3c581191836fa.js"></script>
+@-moz-document domain("fandom.com") {
+/* ==UserStyle==
+@name           Fandom.com clean wiki mod
+@namespace      userstyles.world
+@version        2.0.0
+==/UserStyle== */
+
+
+/* main */
+div.main-container {
+    margin-left: 0px;
+    width: 100%!important;
+}
+
+div.resizable-container {
+    display: block!important;
+    max-width: 100%!important;
+    min-width: 100%!important;
+    margin-left: 0px!important;
+    margin-right: 0px!important;
+    box-sizing: border-box!important;
+}
+
+div.page {
+    width: 85%!important;
+    display: block!important;
+    float: right;
+    box-sizing: border-box;
+}
+
+div.page.has-right-rail {
+    display: grid!important;
+    grid-template-areas: 'main' 'footer';
+}
+
+main.page__main {
+    display: grid;
+    width: 100%!important;
+    grid-area: main;
+    box-sizing: border-box!important;
+    font-size: 90%;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: #666666;
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-left-color: #888888;
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-top-color: #aaaaaa;
+    grid-template-areas: 'title' 'middle' 'bottom';
+}
+
+main.page__main div.page-header {
+    grid-area: title;
+}
+
+main.page__main div#content {
+    grid-area: middle;
+}
+
+main.page__main div.page-footer {
+    grid-area: bottom;
+}
+
+#mw-content-text li, span {
+    white-space: normal!important;
+}
+
+div#articleComments img {
+    max-width: 100%;
+}
+
+div[class*="Comment_wrapper"] {
+    max-width: 75vw;
+}
+
+div#mw-content-text ul.wds-tabs {
+    flex-flow: row wrap;
+}
+
+/* footer */
+aside.page__right-rail {
+    display: block!important;
+    position: static!important;
+    grid-area: footer;
+    width: 100%!important;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #666666;
+    column-count: 3;
+}
+
+div#rail-boxad-wrapper {
+    display: none;
+}
+
+/*
+div.sticky-modules-wrapper {
+    background-color: white;
+}*/
+
+section#page-tools-module {
+    border-bottom-width: 0px;
+}
+/*
+div.sticky-modules-wrapper section {
+    background-color: white;
+}*/
+
+div#mixed-content-footer {
+    max-height: 400px;
+    overflow-y: scroll;
+    overflow-x: auto;
+}
+
+button.content-size-toggle {
+    display: none;
+}
+
+button.right-rail-toggle {
+    display: none;
+}
+
+/* menu */
+div.community-header-wrapper {
+    display: block;
+    width: 15%!important;
+    box-sizing: border-box!important;
+    position: static;
+    z-index: 4;
+    float: left;
+}
+
+header.fandom-community-header {
+    display: grid;
+    box-sizing: border-box!important;
+    grid-template-areas: 'image' 'head' 'content';
+}
+
+a.fandom-community-header__image {
+    grid-area: image;
+    margin-right: 0px;
+    width: 100%!important;
+    overflow: hidden;
+}
+
+a.fandom-community-header__image img {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+div.fandom-community-header__top-container {
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%!important;
+    grid-area: head;
+    display: grid;
+    grid-template-areas: 'title title' 'tools tools';
+}
+
+div.fandom-community-header__community-name-wrapper {
+    grid-area: title;
+    overflow: hidden;
+    padding-left: 10px;
+}
+
+div.wiki-tools {
+    grid-area: tools;
+    margin-left: auto;
+    background-color: rgba(128, 128, 128, 0.75);
+    margin-right: 15px;
+    margin-top: 10px;
+}
+
+div.page-counter {
+    grid-area: counter;
+    padding-right: 10px;
+    margin-top: 5px;
+}
+
+nav.fandom-community-header__local-navigation {
+    box-sizing: border-box!important;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 15px;
+    grid-area: content;
+    display: block!important;
+    width: 14vw!important;
+}
+
+.fandom-community-header__local-navigation ul.wds-tabs {
+    display: block!important;
+}
+
+.fandom-community-header__local-navigation ul.wds-tabs li.wds-dropdown {
+    display: block!important;
+    border: 1px solid var(--wds-dropdown-border-color);
+    /*background-color: rgba(0, 0, 0, 0.5);*/
+    /*
+    background-color: var(--theme-page-background-color--secondary);
+    */
+    background-color: var(--wds-dropdown-background-color);
+    box-shadow: 5px 5px 10px rgba(64, 64, 64, 0.25);
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+
+.fandom-community-header__local-navigation ul.wds-tabs div.wds-dropdown__content {
+    display: block!important;
+    position: relative;
+    border-width: 0px;
+    border-style: none;
+    background-color: transparent;
+    padding-top: 0px;
+    min-width: 100%;
+}
+
+.fandom-community-header__local-navigation ul.wds-tabs div.wds-dropdown__content a {
+    line-height: 1.0;
+    font-size: 0.9em;
+    padding: 0px!important;
+}
+
+div.wds-dropdown__content ul {
+    box-sizing: border-box!important;
+}
+
+div.wds-dropdown__content ul li {
+    box-sizing: border-box!important;
+}
+
+div.wds-dropdown__content ul li a {
+    box-sizing: border-box!important;
+}
+
+div.wds-tabs__tab-label {
+    padding-left: 15px;
+}
+
+div.wiki-tools div.wds-dropdown__content {
+    z-index: 401!important;
+}
+
+div.fandom-sticky-header {
+    display: none!important;
+}
+
+/* minor alterations */
+nav#articleCategories {
+    border-style: solid;
+    border-color: #444444;
+    border-width: 1px;
+    border-radius: 3px;
+    padding-top: 10px;
+    padding-left: 10px;
+    background-color: #eeeeee
+}
+
+div.page-header {
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: #666666;
+}
+
+div.wds-tabber div.wds-is-current > div[style] {
+    margin-bottom: 0em!important;
+}
+
+div.top-ads-container {
+    display: none;
+}
+
+div#content {
+    overflow: visible;
+}
+
+
+figure.thumb {
+    border-style: solid;
+    border-color: #666666;
+    border-width: 1px;
+    border-radius: 3px;
+    padding: 2px;
+    box-sizing: content-box!important;
+    background-color: rgba(200, 200, 200, 0.1);
+}
+
+div.mw-parser-output p + ul {
+    margin-top: 0px;
+}
+
+#mw-data-after-content .smw-table-cell img {
+    max-width: 100%;
+}
+
+.global-navigation, .page-counter {
+    display: none;
+}
+
+/* Remove batch */
+.official-wiki-badge {
+    display: none;
+}
+
+/* Sidebar text color on white theme */
+/*
+.wds-is-not-scrollable.wds-dropdown__content > .wds-list.wds-is-linked > li > a,
+.wds-is-not-scrollable.wds-dropdown-level-nested__content > .wds-list.wds-is-linked > li > a {
+    color: white;
+}
+/* Sidebar headers */
+.wds-tabs__tab-label.wds-dropdown__toggle.first-level-item > a,
+.wds-tabs__tab-label.wds-dropdown__toggle.first-level-item {
+    color: var(--wds-dropdown-text-color);
+}
+
+/* Hide navbar features */
+.wds-tabs__tab-label.wds-dropdown__toggle.first-level-item > .wds-icon.wds-icon-tiny.wds-dropdown__toggle-chevron {
+    display: none;
+}
+.wds-dropdown::before, .wds-dropdown::after {
+    display: none !important;
+}
+
+.wds-dropdown__content.wds-is-right-aligned.wds-is-not-scrollable > .wds-list.wds-is-linked > li > a {
+    color: var(--wds-dropdown-text-color) !important;
+}
+
+
+.search-modal, .search-modal::before {
+    left: 0px !important;
+}
+
+
+}
