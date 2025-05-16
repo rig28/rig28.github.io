@@ -1,1 +1,6 @@
-
+body {
+  margin: 0;
+  background-image: url("../Wiki/img/c00lkidd.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
